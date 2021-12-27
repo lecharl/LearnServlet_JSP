@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+</head>
+<body>
+	<!--
+		아이디 text
+		비번 password
+		이메일 email
+		좋아하는 색(여러개) checkbox
+		성별 radio
+		나이 number
+	-->
+	<!-- 절대경로 -->
+	<!-- <form action="/servPrj/join" method="get"> -->
+	<!-- 상대경로 -->
+	<form action="../join" method="post">
+		<label>아이디</label> <input type="text" name="userId"> <br>
+		<label>비번</label> <input type="password" name="userPwd"> <br>
+		<label>이메일</label> <input type="email" name="userEmail"> <br>
+
+		<label>색</label> <br>
+		빨강 : <input type="checkbox" name="userColor" value="red"><br>
+		파랑 : <input type="checkbox" name="userColor" value="blue"><br>
+		초록 : <input type="checkbox" name="userColor" value="green"><br>
+
+		<label>성별</label><br>
+		M : <input type="radio" name="gender" value="M"><br>
+		F : <input type="radio" name="gender" value="F"><br>
+
+		<label>나이</label> <input type="number" name="userAge"><br>
+		<input type="submit" value="제출">
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<!--
+		화면의 데이터를 받아서 서버(서블릿)에서 처리하기
+
+		원하는 페이지를 (동적으로) 만들어서 클라이언트(브라우저 화면)에게 보내주기
+
+		<계산기>
+		인풋박스 2개 : 숫자 2개 받기
+		+, -
+
+		숫자 2개를 연산자에 따라 계산해서 그 결과를 화면에 보여주기
+	-->
+
+	<form action="../calq">
+		숫자 1 :
+		<!-- <input type="number" name="num1"> -->
+		<input type="number" name="num">
+		<br>
+		숫자 2 :
+		<!-- <input type="number" name="num2"> -->
+		<input type="number" name="num">
+		<input type="submit" value="+" name="oper">
+		<input type="submit" value="-" name="oper">
+	</form>
+
+</body>
+</html>
