@@ -44,6 +44,9 @@ public class Calc3 extends HttpServlet {
 			} catch (ScriptException e) {
 				e.printStackTrace();
 			}
+//		쿠키 삭제
+		}else if(op != null && !"C".equals(op)){
+			exp = "";
 		}else {
 			exp += (val == null)? "" : val;
 			exp += (op == null)? "" : op;
@@ -53,7 +56,11 @@ public class Calc3 extends HttpServlet {
 		
 		
 		Cookie expCookie = new Cookie("exp", exp);
+		if(op != null && !"C".equals(op))
+			expCookie.setMaxAge(0);
+		expCookie.setPath("/");
 		response.addCookie(expCookie);
+		response.sendRedirect("calcpage");
 	}
 
 }

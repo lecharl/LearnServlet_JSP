@@ -85,8 +85,7 @@ public class JoinController extends HttpServlet {
 		} else {
 			//error
 			req.setAttribute("msg", "회원가입 실패");
-			req.getRequestDispatcher("WEB-INF/views/common/errorPage.jsp").forward(req, resp);
-			
+			req.getRequestDispatcher("WEB-INF/views/common/errorPage.jsp").forward(req, resp);			
 		}
 	}
 }

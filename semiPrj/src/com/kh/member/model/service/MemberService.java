@@ -106,7 +106,7 @@ public class MemberService {
 		Connection conn = getConnection();
 		
 		//총 게시글 수 : select count(*)~~
-		int totalBoardCount = countMemberAll(conn);
+		int totalBoardCount = countMemberAll(conn); //5개?
 		//총 회원 수
 //		countMemberAll();
 		

@@ -166,7 +166,7 @@ public class MemberDao {
 		ResultSet rs = null;
 		String sql = "SELECT * FROM MEMBER WHERE %s LIKE ?";
 		sql = String.format(sql, type);
-//		System.out.println("SQL ::: "+sql);
+		System.out.println("SQL ::: "+sql);
 		
 		List<MemberVo> list = new ArrayList<MemberVo>();
 
@@ -174,6 +174,7 @@ public class MemberDao {
 			pstmt = conn.prepareStatement(sql);
 //			pstmt.setString(1, type);
 			pstmt.setString(1, "%"+value+"%");
+//			System.out.println("SQL ::: "+sql);
 			
 			MemberVo selectedMember = null;
 			
